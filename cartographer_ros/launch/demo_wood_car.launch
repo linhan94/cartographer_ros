@@ -1,0 +1,12 @@
+ <!--
+Created by han on 19-7-19.
+-->
+
+<launch>
+  <param name="/use_sim_time" value="true" />
+
+  <include file="$(find cartographer_ros)/launch/wood_car.launch" />
+
+  <node name="rviz" pkg="rviz" type="rviz" required="true"
+      args="-d $(find cartographer_ros)/configuration_files/demo_2d.rviz" />
+</launch>
